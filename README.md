@@ -2,8 +2,11 @@
 
 Basic Template for making a Webview App to view your website, with a Google Ad Banner in the bottom
 
-- compileSdkVersion 28
-- using androidx
+- CompileSdkVersion 28
+- Using androidx
+
+Overriding Webview:
+- Pressing back button will return to last page
 
 To use this,
 
@@ -11,5 +14,7 @@ In MainActivity.java, change ``webview.loadUrl("yourLink")`` and ``MobileAds.ini
 
 In activity_main.xml, change ``ads:adUnitId="yourAdUnitId"`` 
 
-It will look like this: <br>
+You still need to make your web page mobile friendly though.
+
+It will look like this (blank part will be your page): <br>
 ![alt text](https://user-images.githubusercontent.com/9410593/41933853-9578978a-79b7-11e8-90b7-50c60affd163.png)
