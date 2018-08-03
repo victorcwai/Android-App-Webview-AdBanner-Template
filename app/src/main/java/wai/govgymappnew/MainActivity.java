@@ -56,8 +56,11 @@ public class MainActivity extends AppCompatActivity {
                  }
              }
          });
+
         // replace this with your own link/web app address
-        webview.loadUrl("http://ec2-18-179-186-35.ap-northeast-1.compute.amazonaws.com/");
+        if (savedInstanceState == null) {
+            webview.loadUrl("http://ec2-18-179-186-35.ap-northeast-1.compute.amazonaws.com/");
+        }
     }
 
     @Override
@@ -78,5 +81,24 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState )
+    {
+        WebView webview = (WebView) findViewById(R.id.webview);
+
+        super.onSaveInstanceState(outState);
+        webview.saveState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        WebView webview = (WebView) findViewById(R.id.webview);
+
+        super.onRestoreInstanceState(savedInstanceState);
+        webview.restoreState(savedInstanceState);
+    }
+
 
 }
