@@ -7,6 +7,7 @@ Basic Template for making a Webview App to view your website, with a Google Ad B
 
 Overriding Webview:
 - Pressing back button will return to last page
+- Won't reload page when orientation change
 
 To use this,
 
